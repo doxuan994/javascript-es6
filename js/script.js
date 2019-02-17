@@ -24,14 +24,34 @@
 // }
 
 
-window.onload = function() {
-    var items = document.getElementsByTagName("li");
+// window.onload = function() {
+//     var items = document.getElementsByTagName("li");
+//
+//     for (let i = 0; i < items.length; i++) {
+//         items[i].onclick = function() {
+//             console.log(i);
+//         }
+//     }
+//
+//     // console.log(i);
+// }
 
-    for (let i = 0; i < items.length; i++) {
-        items[i].onclick = function() {
-            console.log(i);
-        }
+
+window.onload = function() {
+
+    // function log(num=10) {
+    //     console.log(num);
+    // }
+    //
+    // log(4);
+
+
+    function logNinja(name = "Ryu", belt = "Red", age = 25) {
+        console.log("My name is " + name +
+                    " and my belt color us " + belt +
+                    " and my age is " + age);
     }
 
-    // console.log(i);
+
+    logNinja("Shaun", "Pink", 40);
 }
