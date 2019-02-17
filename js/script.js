@@ -166,45 +166,81 @@
 // }
 
 
+// window.onload = function() {
+//     // var ninjaGreeting = function() {
+//     //     console.log("hiiiiiya");
+//     // };
+//
+//     // var ninjaGreeting = (name) => console.log(`${name} says hiiiiiiya`);
+//     // var ninjaGreeting = name => console.log(`${name} says hiiiiiiya`);
+//
+//     // ninjaGreeting("Mark");
+//
+//     // var ninja = {
+//     //     name: "Ryu",
+//     //     chop(x) {
+//     //         var _this = this;
+//     //         window.setInterval(function() {
+//     //             if (x > 0) {
+//     //                 console.log(_this.name + " chopped the enemy");
+//     //                 x--;
+//     //             }
+//     //         }, 1000);
+//     //     }
+//     // };
+//     // ninja.chop(5);
+//
+//
+//     var ninja = {
+//         name: "Ryu",
+//         chop(x) {
+//             window.setInterval(() => {
+//                 if (x > 0) {
+//                     console.log(this.name + " chopped the enemy");
+//                     x--;
+//                 }
+//             }, 1000);
+//         }
+//     };
+//     ninja.chop(5);
+// }
+
+
+
 window.onload = function() {
-    // var ninjaGreeting = function() {
-    //     console.log("hiiiiiya");
-    // };
 
-    // var ninjaGreeting = (name) => console.log(`${name} says hiiiiiiya`);
-    // var ninjaGreeting = name => console.log(`${name} says hiiiiiiya`);
-
-    // ninjaGreeting("Mark");
-
-    // var ninja = {
-    //     name: "Ryu",
-    //     chop(x) {
-    //         var _this = this;
-    //         window.setInterval(function() {
-    //             if (x > 0) {
-    //                 console.log(_this.name + " chopped the enemy");
-    //                 x--;
-    //             }
-    //         }, 1000);
-    //     }
-    // };
-    // ninja.chop(5);
+    // var names = new Set();
+    //
+    // names.add("Shaun").add("Ryu").add("Crystal");
+    // names.delete("Crystal");
+    //
+    // console.log(names.has("Ryu"));
+    // console.log(names.has("Crystal"));
+    //
+    // // console.log(names.delete("Ryu"));
+    //
+    //
+    // // names.clear();
+    //
+    // console.log(names.size);
+    //
+    //
+    // console.log(names);
 
 
-    var ninja = {
-        name: "Ryu",
-        chop(x) {
-            window.setInterval(() => {
-                if (x > 0) {
-                    console.log(this.name + " chopped the enemy");
-                    x--;
-                }
-            }, 1000);
-        }
-    };
-    ninja.chop(5);
+    var ninja = ["Shaun", "Crystal", "Ryu", "YoShi", "Ryu", "YoShi"];
+
+    var refinedNinja = new Set(ninja);
+
+
+    console.log(refinedNinja);
+
+
+    ninja = [...refinedNinja];
+
+    console.log(ninja);
+
 }
-
 
 
 
