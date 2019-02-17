@@ -82,22 +82,57 @@
 
 
 
+// window.onload = function() {
+//
+//     // var temp = `Hello, my name is Ryu`;
+//     // console.log(temp);
+//
+//
+//     function logNinja(name, age) {
+//         // console.log("My name is" + name +
+//         //             " and my age is " + age);
+//
+//
+//         console.log(`My name is ${name} and my age is ${age + 10}`);
+//     }
+//
+//
+//     logNinja("Ryu", 24);
+//
+// }
+
+
 window.onload = function() {
 
-    // var temp = `Hello, my name is Ryu`;
-    // console.log(temp);
+    var name = "Crystal";
+    var belt = "Black";
 
+    var ninja = {
+        // name: name,
+        // belt: belt
 
-    function logNinja(name, age) {
-        // console.log("My name is" + name +
-        //             " and my age is " + age);
+        name, belt,
 
+        chop(x) {
+            console.log(`You chopped the enemy ${x} times`);
+        }
+    };
 
-        console.log(`My name is ${name} and my age is ${age + 10}`);
-    }
-
-
-
-    logNinja("Ryu", 24);
+    console.log(ninja.name + " " + ninja.belt);
+    console.log(ninja.chop(5));
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
