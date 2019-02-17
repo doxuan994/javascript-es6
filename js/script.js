@@ -102,26 +102,80 @@
 // }
 
 
+// window.onload = function() {
+//
+//     var name = "Crystal";
+//     var belt = "Black";
+//
+//     var ninja = {
+//         // name: name,
+//         // belt: belt
+//
+//         name, belt,
+//
+//         chop(x) {
+//             console.log(`You chopped the enemy ${x} times`);
+//         }
+//     };
+//
+//     console.log(ninja.name + " " + ninja.belt);
+//     console.log(ninja.chop(5));
+//
+// }
+
 window.onload = function() {
 
-    var name = "Crystal";
-    var belt = "Black";
+    // var str = "graaaaaaaaavy ";
+    // console.log(str.repeat(5));
 
-    var ninja = {
-        // name: name,
-        // belt: belt
 
-        name, belt,
+    // var str = "goodBye";
+    // console.log(str.startsWith("good"));
+    // console.log(str.startsWith("bye"));
+    // console.log(str.startsWith("Bye", 4));
+    //
+    //
+    // console.log(str.endsWith("Bye"));
+    // console.log(str.endsWith("good", str.length - 3));
 
-        chop(x) {
-            console.log(`You chopped the enemy ${x} times`);
-        }
-    };
 
-    console.log(ninja.name + " " + ninja.belt);
-    console.log(ninja.chop(5));
+    // var youSay = "goodbye";
+    //
+    // if (youSay.startsWith("goodbye")) {
+    //     var iSay = "Hello";
+    // }
+    //
+    // console.log(`You say ${youSay}, I say ${iSay}`);
+
+    var test = "My name is Ryu";
+
+    console.log(test.includes("name"));
+
+
+
+
+
+    /* NEW STRING IN METHODS
+    - repeat
+    - startsWith
+    - endsWith
+    -includes
+
+    */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
