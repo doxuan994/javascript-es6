@@ -37,21 +37,45 @@
 // }
 
 
+// window.onload = function() {
+//
+//     // function log(num=10) {
+//     //     console.log(num);
+//     // }
+//     //
+//     // log(4);
+//
+//
+//     function logNinja(name = "Ryu", belt = "Red", age = 25) {
+//         console.log("My name is " + name +
+//                     " and my belt color us " + belt +
+//                     " and my age is " + age);
+//     }
+//
+//
+//     logNinja("Shaun", "Pink", 40);
+// }
+
+
+
 window.onload = function() {
 
-    // function log(num=10) {
-    //     console.log(num);
-    // }
+    // var meats = ["ham", "salami", "bacon"];
+    // console.log(...meats);
+
+    // var nums1 = [1,2,3];
+    // var nums2 = [...nums1,4,5,6];
     //
-    // log(4);
+    // console.log(nums2);
 
 
-    function logNinja(name = "Ryu", belt = "Red", age = 25) {
-        console.log("My name is " + name +
-                    " and my belt color us " + belt +
-                    " and my age is " + age);
+    var nums = [3, 5, 7];
+
+    function addNums(a, b, c) {
+        console.log(a + b + c);
     }
 
 
-    logNinja("Shaun", "Pink", 40);
+    addNums(...nums);
+
 }
