@@ -123,50 +123,87 @@
 //
 // }
 
+// window.onload = function() {
+//
+//     // var str = "graaaaaaaaavy ";
+//     // console.log(str.repeat(5));
+//
+//
+//     // var str = "goodBye";
+//     // console.log(str.startsWith("good"));
+//     // console.log(str.startsWith("bye"));
+//     // console.log(str.startsWith("Bye", 4));
+//     //
+//     //
+//     // console.log(str.endsWith("Bye"));
+//     // console.log(str.endsWith("good", str.length - 3));
+//
+//
+//     // var youSay = "goodbye";
+//     //
+//     // if (youSay.startsWith("goodbye")) {
+//     //     var iSay = "Hello";
+//     // }
+//     //
+//     // console.log(`You say ${youSay}, I say ${iSay}`);
+//
+//     // var test = "My name is Ryu";
+//     //
+//     // console.log(test.includes("name"));
+//
+//
+//
+//
+//
+//     /* NEW STRING IN METHODS
+//     - repeat
+//     - startsWith
+//     - endsWith
+//     -includes
+//
+//     */
+//
+// }
+
+
 window.onload = function() {
+    // var ninjaGreeting = function() {
+    //     console.log("hiiiiiya");
+    // };
 
-    // var str = "graaaaaaaaavy ";
-    // console.log(str.repeat(5));
+    // var ninjaGreeting = (name) => console.log(`${name} says hiiiiiiya`);
+    // var ninjaGreeting = name => console.log(`${name} says hiiiiiiya`);
 
+    // ninjaGreeting("Mark");
 
-    // var str = "goodBye";
-    // console.log(str.startsWith("good"));
-    // console.log(str.startsWith("bye"));
-    // console.log(str.startsWith("Bye", 4));
-    //
-    //
-    // console.log(str.endsWith("Bye"));
-    // console.log(str.endsWith("good", str.length - 3));
-
-
-    // var youSay = "goodbye";
-    //
-    // if (youSay.startsWith("goodbye")) {
-    //     var iSay = "Hello";
-    // }
-    //
-    // console.log(`You say ${youSay}, I say ${iSay}`);
-
-    var test = "My name is Ryu";
-
-    console.log(test.includes("name"));
+    // var ninja = {
+    //     name: "Ryu",
+    //     chop(x) {
+    //         var _this = this;
+    //         window.setInterval(function() {
+    //             if (x > 0) {
+    //                 console.log(_this.name + " chopped the enemy");
+    //                 x--;
+    //             }
+    //         }, 1000);
+    //     }
+    // };
+    // ninja.chop(5);
 
 
-
-
-
-    /* NEW STRING IN METHODS
-    - repeat
-    - startsWith
-    - endsWith
-    -includes
-
-    */
-
+    var ninja = {
+        name: "Ryu",
+        chop(x) {
+            window.setInterval(() => {
+                if (x > 0) {
+                    console.log(this.name + " chopped the enemy");
+                    x--;
+                }
+            }, 1000);
+        }
+    };
+    ninja.chop(5);
 }
-
-
-
 
 
 
