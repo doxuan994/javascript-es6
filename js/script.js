@@ -207,43 +207,93 @@
 
 
 
+// window.onload = function() {
+//
+//     // var names = new Set();
+//     //
+//     // names.add("Shaun").add("Ryu").add("Crystal");
+//     // names.delete("Crystal");
+//     //
+//     // console.log(names.has("Ryu"));
+//     // console.log(names.has("Crystal"));
+//     //
+//     // // console.log(names.delete("Ryu"));
+//     //
+//     //
+//     // // names.clear();
+//     //
+//     // console.log(names.size);
+//     //
+//     //
+//     // console.log(names);
+//
+//
+//     var ninja = ["Shaun", "Crystal", "Ryu", "YoShi", "Ryu", "YoShi"];
+//
+//     var refinedNinja = new Set(ninja);
+//
+//     console.log(refinedNinja);
+//
+//     ninja = [...refinedNinja];
+//
+//     console.log(ninja);
+//
+// }
+
+
 window.onload = function() {
 
-    // var names = new Set();
+    // // Generators.
+    // function* gen() {
+    //     // yield console.log("Pear");
+    //     // yield console.log("Banana");
+    //     // yield console.log("Apple");
+    //     var x = yield "Pear";
+    //     var y = yield "Banana";
+    //     var z = yield "Apple";
     //
-    // names.add("Shaun").add("Ryu").add("Crystal");
-    // names.delete("Crystal");
+    //     return x + y + z;
     //
-    // console.log(names.has("Ryu"));
-    // console.log(names.has("Crystal"));
-    //
-    // // console.log(names.delete("Ryu"));
-    //
-    //
-    // // names.clear();
-    //
-    // console.log(names.size);
+    // }
     //
     //
-    // console.log(names);
+    // var myGen = gen();
+    //
+    // console.log(myGen.next());
+    // console.log(myGen.next(10));
+    // console.log(myGen.next(5));
+    // console.log(myGen.next(3));
 
 
-    var ninja = ["Shaun", "Crystal", "Ryu", "YoShi", "Ryu", "YoShi"];
 
-    var refinedNinja = new Set(ninja);
+    // myGen.next();
+    // myGen.next();
+    // myGen.next();
+
+    function genWrapper(generator) {
+        var myGen = generator();
+
+        function handle(yielded) {
+            if (!yielded.done) {
+                yielded.value.then(function(data) {
+                    return handle(myGen.next(data));
+                });
+            }
+        }
+
+        return handle(myGen.next());
+    }
 
 
-    console.log(refinedNinja);
-
-
-    ninja = [...refinedNinja];
-
-    console.log(ninja);
-
+    genWrapper(function* genegator() {
+        var tweets = yield $.getJSON("data/tweets.json");
+        console.log(tweets);
+        var friends = yield $.getJSON("data/fb-friends.json");
+        console.log(friends);
+        var ytVids = yield $.getJSON("data/yt-vids.json");
+        console.log(ytVids);
+    });
 }
-
-
-
 
 
 
